@@ -1,0 +1,73 @@
+/* THEMING: Change these variables to restyle the entire project */
+:root {
+  --color-primary: #00e5a0;
+  --color-primary-dark: #00b377;
+  --color-background: #000000;
+  --color-surface: #0d0d0d;
+  --color-surface-2: #141414;
+  --color-foreground: #f0fdf4;
+  --color-muted: #64748b;
+  --color-border: #1e2d3d;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans, system-ui, sans-serif);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Animated gradient background for Hero section */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero-gradient {
+  background: var(--color-background);
+}
+
+/* Primary glow box-shadow utility */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(0, 229, 160, 0.2), 0 0 40px rgba(0, 229, 160, 0.05);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}

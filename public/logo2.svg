@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Placeholder logo: shield shape with "J" initial -->
+  <!-- TODO: Replace this file with the real JagerVPN logo -->
+  <path
+    d="M16 2L4 7v10c0 6.627 5.373 12 12 12s12-5.373 12-12V7L16 2z"
+    fill="#161b27"
+    stroke="#00e5a0"
+    stroke-width="1.5"
+  />
+  <text
+    x="16"
+    y="22"
+    text-anchor="middle"
+    font-family="system-ui, sans-serif"
+    font-size="14"
+    font-weight="700"
+    fill="#00e5a0"
+  >J</text>
+</svg>
