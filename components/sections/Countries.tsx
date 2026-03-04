@@ -8,18 +8,18 @@ export function Countries() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <FadeIn className="mb-4 text-center">
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+          <h2 className="text-3xl font-bold sm:text-4xl glass-heading">
             Доступные страны
           </h2>
         </FadeIn>
         <FadeIn delay={0.1} className="mb-14 text-center">
-          <p className="text-muted">
+          <p className="glass-muted">
             Подключайтесь к серверам в 50+ точках мира
           </p>
         </FadeIn>
 
         {/* Country cards grid — 3 cols mobile, 4 tablet, 6 desktop */}
-        <StaggerContainer className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6">
+        <StaggerContainer className="grid grid-cols-3 gap-3 sm:grid-cols-4">
           {SITE_CONFIG.countries.map((country) => (
             <StaggerItem key={country.name}>
               <div
@@ -54,7 +54,7 @@ export function Countries() {
 
         {/* More countries note */}
         <FadeIn delay={0.2} className="mt-10 text-center">
-          <p className="text-sm text-muted">...и ещё 40+ стран</p>
+          <p className="text-sm glass-muted">...и ещё 40+ стран</p>
         </FadeIn>
       </div>
     </section>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { SITE_CONFIG } from "@/lib/constants";
-import MatrixRain from "@/components/animations/MatrixRain";
+import { ScrollLightProvider } from "@/components/animations/ScrollLightProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="ru" className={inter.variable}>
       <body className="bg-background text-foreground antialiased">
-        <MatrixRain />
+        <ScrollLightProvider />
         <div style={{ position: 'relative', zIndex: 1 }}>
           {children}
         </div>

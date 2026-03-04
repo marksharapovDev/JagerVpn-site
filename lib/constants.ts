@@ -24,7 +24,7 @@ export interface SiteConfig {
 // ─────────────────────────────────────────────
 export const SITE_CONFIG: SiteConfig = {
   siteName: "JagerVPN",
-  tagline: "Быстро. Надёжно. Анонимно.",
+  tagline: "Опьяняющая скрорость.",
 
   // TODO: replace placeholders with your real Telegram bot and channel links
   telegramBot: "https://t.me/YOUR_BOT",

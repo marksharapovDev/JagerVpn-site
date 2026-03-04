@@ -37,13 +37,13 @@ export function Features() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <FadeIn className="mb-16 text-center">
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+          <h2 className="text-3xl font-bold sm:text-4xl glass-heading">
             Почему JagerVPN?
           </h2>
         </FadeIn>
 
         {/* Feature cards grid */}
-        <StaggerContainer className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <StaggerContainer className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
@@ -54,10 +54,10 @@ export function Features() {
                     <Icon size={22} className="text-primary" />
                   </div>
                   <div>
-                    <h3 className="mb-1 font-semibold text-foreground">
+                    <h3 className="mb-1 font-semibold glass-subheading">
                       {feature.title}
                     </h3>
-                    <p className="text-sm text-muted">{feature.description}</p>
+                    <p className="text-sm glass-body">{feature.description}</p>
                   </div>
                 </div>
               </StaggerItem>

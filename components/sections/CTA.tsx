@@ -6,19 +6,19 @@ export function CTA() {
   return (
     <section
       id="cta"
-      className="border-b border-t border-border bg-surface py-24"
+      className="py-24"
     >
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         {/* Heading */}
         <FadeIn>
-          <h2 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl">
+          <h2 className="mb-4 text-3xl font-bold sm:text-4xl glass-heading">
             Готовы защитить свою приватность?
           </h2>
         </FadeIn>
 
         {/* Sub-text */}
         <FadeIn delay={0.1}>
-          <p className="mb-10 text-muted">
+          <p className="mb-10 glass-muted">
             Подключитесь к JagerVPN сегодня — настройка займёт менее 2 минут
           </p>
         </FadeIn>
@@ -52,7 +52,7 @@ export function CTA() {
 
         {/* Platform availability note */}
         <FadeIn delay={0.3}>
-          <p className="mt-8 text-xs text-muted">
+          <p className="mt-8 text-xs glass-muted">
             Доступно на iOS, Android, Windows, macOS
           </p>
         </FadeIn>

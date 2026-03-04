@@ -38,19 +38,6 @@ const plans: PricingPlan[] = [
     ],
     isPopular: true,
   },
-  {
-    name: "Год",
-    price: "$3",
-    billing: "в месяц · $36 в год",
-    badge: "Выгоднее всего",
-    devices: 5,
-    features: [
-      "5 устройств",
-      "Все страны",
-      "Приоритетная поддержка",
-      "Бесплатная настройка",
-    ],
-  },
 ];
 
 export function Pricing() {
@@ -59,16 +46,16 @@ export function Pricing() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <FadeIn className="mb-4 text-center">
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+          <h2 className="text-3xl font-bold sm:text-4xl glass-heading">
             Простые тарифы
           </h2>
         </FadeIn>
         <FadeIn delay={0.1} className="mb-14 text-center">
-          <p className="text-muted">Без скрытых платежей. Отмена в любой момент.</p>
+          <p className="glass-muted">Без скрытых платежей. Отмена в любой момент.</p>
         </FadeIn>
 
         {/* Pricing cards */}
-        <StaggerContainer className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <StaggerContainer className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {plans.map((plan) => (
             <StaggerItem key={plan.name}>
               <div
@@ -94,25 +81,25 @@ export function Pricing() {
                 )}
 
                 {/* Plan name */}
-                <h3 className="mb-4 text-lg font-semibold text-foreground">
+                <h3 className="mb-4 text-lg font-semibold glass-subheading">
                   {plan.name}
                 </h3>
 
                 {/* Price */}
                 <div className="mb-1">
-                  <span className="text-4xl font-extrabold text-primary">
+                  <span className="text-4xl font-extrabold glass-hero">
                     {plan.price}
                   </span>
-                  <span className="text-sm text-muted"> /мес</span>
+                  <span className="text-sm glass-muted"> /мес</span>
                 </div>
                 {plan.billing && (
-                  <p className="mb-6 text-xs text-muted">{plan.billing}</p>
+                  <p className="mb-6 text-xs glass-muted">{plan.billing}</p>
                 )}
 
                 {/* Feature list */}
                 <ul className="mb-8 flex flex-grow flex-col gap-3">
                   {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-sm text-foreground">
+                    <li key={feature} className="flex items-center gap-2 text-sm glass-body">
                       <Check size={15} className="shrink-0 text-primary" />
                       {feature}
                     </li>

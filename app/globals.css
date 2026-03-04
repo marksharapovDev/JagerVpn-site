@@ -71,3 +71,94 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-muted);
 }
+
+/* ─── Glass Text Effects ─────────────────────────────────── */
+
+/* Light angle driven by scroll progress (updated via JS in ScrollLightProvider) */
+:root {
+  --light-angle: 168deg;
+}
+
+/* Shimmer sweep: bright band slides across the hero title */
+@keyframes glassShimmer {
+  0%   { background-position: 300% center, 0% 0%; }
+  100% { background-position: -100% center, 0% 0%; }
+}
+
+/* ── Hero title — animated shimmer + scroll-reactive gradient ── */
+.glass-hero {
+  background:
+    /* Moving highlight band */
+    linear-gradient(
+      90deg,
+      transparent            0%,
+      rgba(255,255,255,0.00) 30%,
+      rgba(255,255,255,0.38) 50%,
+      rgba(255,255,255,0.00) 70%,
+      transparent           100%
+    ),
+    /* Base "lit from above" gradient */
+    linear-gradient(
+      var(--light-angle),
+      rgba(255,255,255,1.00)  0%,
+      rgba(160,245,210,0.95) 18%,
+      rgba(0,229,160,0.90)   50%,
+      rgba(0,140,100,0.82)   80%,
+      rgba(0,70,50,0.74)    100%
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 400% 100%, 100% 100%;
+  animation: glassShimmer 9s ease-in-out infinite;
+  filter:
+    drop-shadow(0 0 22px rgba(0,229,160,0.38))
+    drop-shadow(0 0 55px rgba(0,229,160,0.12));
+}
+
+/* ── Section headings — scroll-reactive light direction ── */
+.glass-heading {
+  background: linear-gradient(
+    var(--light-angle),
+    rgba(255,255,255,0.98)  0%,
+    rgba(180,255,222,0.93) 18%,
+    rgba(0,229,160,0.87)   50%,
+    rgba(0,130,95,0.80)    80%,
+    rgba(0,70,50,0.72)    100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 14px rgba(0,229,160,0.22));
+  transition: filter 0.4s ease;
+}
+
+/* ── Card / item titles ── */
+.glass-subheading {
+  background: linear-gradient(
+    var(--light-angle),
+    rgba(235,255,248,0.97)  0%,
+    rgba(140,232,200,0.89) 45%,
+    rgba(0,180,128,0.79)  100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(0,229,160,0.14));
+}
+
+/* ── Body / description text ── */
+.glass-body {
+  color: rgba(215,248,236,0.90);
+  text-shadow:
+    0 1px 0   rgba(255,255,255,0.06),
+    0 0  14px rgba(0,229,160,0.10);
+}
+
+/* ── Muted / secondary text ── */
+.glass-muted {
+  color: rgba(120,185,160,0.82);
+  text-shadow:
+    0 1px 0  rgba(255,255,255,0.04),
+    0 0 10px rgba(0,229,160,0.07);
+}
