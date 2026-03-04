@@ -13,6 +13,9 @@ export function FullPageScroller() {
   const touchStartYRef = useRef(0);
 
   useEffect(() => {
+    // On touch-screen devices (mobile/tablet) use native scroll
+    if (window.matchMedia("(pointer: coarse)").matches) return;
+
     const getSections = () =>
       Array.from(
         document.querySelectorAll("main section[id]")

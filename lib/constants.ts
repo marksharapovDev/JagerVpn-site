@@ -2,6 +2,7 @@ export interface Country {
   name: string;
   flag: string;
   isPopular: boolean;
+  description: string;
 }
 
 export interface NavLink {
@@ -26,9 +27,8 @@ export const SITE_CONFIG: SiteConfig = {
   siteName: "JagerVPN",
   tagline: "Опьяняющая скрорость.",
 
-  // TODO: replace placeholders with your real Telegram bot and channel links
-  telegramBot: "https://t.me/YOUR_BOT",
-  telegramChannel: "https://t.me/YOUR_CHANNEL",
+  telegramBot: "https://t.me/JagerVPN_bot",
+  telegramChannel: "https://t.me/jagervpn",
 
   navLinks: [
     { label: "Главная", href: "#hero" },
@@ -38,17 +38,9 @@ export const SITE_CONFIG: SiteConfig = {
   ],
 
   countries: [
-    { name: "Германия", flag: "🇩🇪", isPopular: true },
-    { name: "США", flag: "🇺🇸", isPopular: true },
-    { name: "Нидерланды", flag: "🇳🇱", isPopular: true },
-    { name: "Великобритания", flag: "🇬🇧", isPopular: true },
-    { name: "Франция", flag: "🇫🇷", isPopular: false },
-    { name: "Япония", flag: "🇯🇵", isPopular: false },
-    { name: "Сингапур", flag: "🇸🇬", isPopular: false },
-    { name: "Канада", flag: "🇨🇦", isPopular: false },
-    { name: "Швеция", flag: "🇸🇪", isPopular: false },
-    { name: "Швейцария", flag: "🇨🇭", isPopular: false },
-    { name: "ОАЭ", flag: "🇦🇪", isPopular: false },
-    { name: "Польша", flag: "🇵🇱", isPopular: false },
+    { name: "Нидерланды", flag: "🇳🇱", isPopular: true, description: "Стабильный канал без потерь пакетов — надёжное соединение круглосуточно." },
+    { name: "Россия", flag: "🇷🇺", isPopular: false, description: "Низкая задержка и мгновенный пинг — идеально для онлайн-игр." },
+    { name: "Швеция", flag: "🇸🇪", isPopular: false, description: "Максимальная скорость без ограничений — свобода от любых блокировок." },
+    { name: "Финляндия", flag: "🇫🇮", isPopular: false, description: "Быстрое соединение без цензуры — открытый интернет без фильтров." },
   ],
 };

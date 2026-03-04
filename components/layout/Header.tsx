@@ -29,12 +29,11 @@ export function Header() {
       className="fixed top-0 left-0 right-0 z-50 border-b border-border backdrop-blur-md hidden md:block"
       style={{ backgroundColor: "rgba(13, 17, 23, 0.8)" }}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+      <div className="relative flex h-16 items-center px-4 sm:px-6 lg:px-24">
           {/* Logo */}
           <a
             href="#hero"
-            className="flex items-center gap-2 transition-all duration-300 hover:opacity-80"
+            className="shrink-0 flex items-center gap-2 transition-all duration-300 hover:opacity-80"
             onClick={(e) => {
               e.preventDefault();
               handleNavClick("#hero");
@@ -52,8 +51,8 @@ export function Header() {
             </span>
           </a>
 
-          {/* Desktop navigation */}
-          <nav className="hidden items-center gap-6 md:flex">
+          {/* Desktop navigation — centered relative to full viewport */}
+          <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 md:flex">
             {SITE_CONFIG.navLinks.map((link) => (
               <a
                 key={link.href}
@@ -70,7 +69,7 @@ export function Header() {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:block">
+          <div className="ml-auto hidden md:flex">
             <div className="glass-btn-wrap">
               <button
                 onClick={() => handleNavClick("#cta")}
@@ -121,7 +120,6 @@ export function Header() {
               </SheetContent>
             </Sheet>
           </div>
-        </div>
       </div>
     </header>
   );

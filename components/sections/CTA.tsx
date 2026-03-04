@@ -1,7 +1,7 @@
-import { Send } from "lucide-react";
-import { FadeIn } from "@/components/animations/FadeIn";
-import { SITE_CONFIG } from "@/lib/constants";
-import { Footer } from "@/components/layout/Footer";
+import { FadeIn } from "@/components/animations/FadeIn"
+import { Footer } from "@/components/layout/Footer"
+import { SITE_CONFIG } from "@/lib/constants"
+import { Send } from "lucide-react"
 
 export function CTA() {
   return (
@@ -15,7 +15,7 @@ export function CTA() {
           {/* Heading */}
           <FadeIn>
             <h2 className="mb-4 text-3xl font-bold sm:text-4xl glass-heading">
-              Готовы защитить свою приватность?
+              Не тормози, подключайся!
             </h2>
           </FadeIn>
 
@@ -28,9 +28,9 @@ export function CTA() {
 
           {/* Action buttons */}
           <FadeIn delay={0.2}>
-            <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <div className="flex flex-col w-fit min-w-80 mx-auto gap-4 sm:w-auto sm:min-w-0 sm:flex-row sm:justify-center">
               {/* Primary — Telegram bot */}
-              <div className="glass-btn-wrap block w-full sm:inline-block sm:w-auto">
+              <div className="glass-btn-wrap sm:inline-block sm:w-auto">
                 <a
                   href={SITE_CONFIG.telegramBot}
                   target="_blank"
@@ -43,7 +43,7 @@ export function CTA() {
               </div>
 
               {/* Ghost — Telegram channel */}
-              <div className="glass-btn-wrap block w-full sm:inline-block sm:w-auto">
+              <div className="glass-btn-wrap sm:inline-block sm:w-auto">
                 <a
                   href={SITE_CONFIG.telegramChannel}
                   target="_blank"
@@ -66,8 +66,10 @@ export function CTA() {
         </div>
       </div>
 
-      {/* Footer pinned to the bottom of the last section */}
-      <Footer />
+      {/* Footer: on desktop, break out of the constrained div to full page width */}
+      <div className="lg:-ml-16 lg:w-screen lg:relative lg:z-[10]">
+        <Footer />
+      </div>
     </section>
   );
 }

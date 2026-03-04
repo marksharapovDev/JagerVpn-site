@@ -1,6 +1,6 @@
-import { Zap, Shield, EyeOff, Globe, type LucideIcon } from "lucide-react";
-import { FadeIn } from "@/components/animations/FadeIn";
-import { StaggerContainer, StaggerItem } from "@/components/animations/StaggerContainer";
+import { FadeIn } from "@/components/animations/FadeIn"
+import { StaggerContainer, StaggerItem } from "@/components/animations/StaggerContainer"
+import { EyeOff, Globe, Shield, Zap, type LucideIcon } from "lucide-react"
 
 interface Feature {
   icon: LucideIcon;
@@ -11,13 +11,13 @@ interface Feature {
 const features: Feature[] = [
   {
     icon: Zap,
-    title: "Молниеносная скорость",
+    title: "Стабильное соединение",
     description: "До 1 Гбит/с на всех серверах",
   },
   {
     icon: Shield,
-    title: "Военное шифрование",
-    description: "AES-256 на всех подключениях",
+    title: "Современны протоколы",
+    description: "Vless, XHTTP, GRPC",
   },
   {
     icon: EyeOff,
@@ -26,8 +26,8 @@ const features: Feature[] = [
   },
   {
     icon: Globe,
-    title: "50+ стран",
-    description: "Серверы по всему миру",
+    title: "Сстраны на любой вкус",
+    description: "Серверы по всему миру!",
   },
 ];
 
