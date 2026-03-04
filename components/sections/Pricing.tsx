@@ -42,8 +42,8 @@ const plans: PricingPlan[] = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-24">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <section id="pricing" className="flex min-h-screen items-center">
+      <div className="w-full mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
         {/* Section heading */}
         <FadeIn className="mb-4 text-center">
           <h2 className="text-3xl font-bold sm:text-4xl glass-heading">
@@ -107,19 +107,20 @@ export function Pricing() {
                 </ul>
 
                 {/* CTA — links to Telegram bot */}
-                <a
-                  href={SITE_CONFIG.telegramBot}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={[
-                    "block rounded-xl py-3 text-center text-sm font-semibold transition-all duration-300",
-                    plan.isPopular
-                      ? "bg-primary text-background hover:bg-primary-dark hover:shadow-[0_0_20px_rgba(0,229,160,0.3)]"
-                      : "border border-border text-foreground hover:border-primary hover:text-primary",
-                  ].join(" ")}
-                >
-                  Начать
-                </a>
+                <div className="glass-btn-wrap block w-full">
+                  <a
+                    href={SITE_CONFIG.telegramBot}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={[
+                      "glass-btn w-full text-sm",
+                      plan.isPopular ? "glass-btn-green" : "",
+                    ].join(" ")}
+                  >
+                    <span>Начать</span>
+                  </a>
+                  <div className="glass-btn-shadow" />
+                </div>
               </div>
             </StaggerItem>
           ))}

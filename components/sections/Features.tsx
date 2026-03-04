@@ -33,8 +33,8 @@ const features: Feature[] = [
 
 export function Features() {
   return (
-    <section id="features" className="py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="features" className="flex min-h-screen items-center">
+      <div className="w-full mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         {/* Section heading */}
         <FadeIn className="mb-16 text-center">
           <h2 className="text-3xl font-bold sm:text-4xl glass-heading">

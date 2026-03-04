@@ -71,12 +71,15 @@ export function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <button
-              onClick={() => handleNavClick("#cta")}
-              className="rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-background transition-all duration-300 hover:bg-primary-dark hover:shadow-[0_0_20px_rgba(0,229,160,0.3)]"
-            >
-              Подключиться
-            </button>
+            <div className="glass-btn-wrap">
+              <button
+                onClick={() => handleNavClick("#cta")}
+                className="glass-btn glass-btn-green text-sm"
+              >
+                <span>Подключиться</span>
+              </button>
+              <div className="glass-btn-shadow" />
+            </div>
           </div>
 
           {/* Mobile hamburger */}
@@ -105,12 +108,15 @@ export function Header() {
                       {link.label}
                     </button>
                   ))}
-                  <button
-                    onClick={() => handleNavClick("#cta")}
-                    className="mt-4 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-background transition-all duration-300 hover:bg-primary-dark"
-                  >
-                    Подключиться
-                  </button>
+                  <div className="glass-btn-wrap mt-4 block w-full">
+                    <button
+                      onClick={() => handleNavClick("#cta")}
+                      className="glass-btn glass-btn-green w-full text-sm"
+                    >
+                      <span>Подключиться</span>
+                    </button>
+                    <div className="glass-btn-shadow" />
+                  </div>
                 </nav>
               </SheetContent>
             </Sheet>

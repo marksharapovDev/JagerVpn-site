@@ -16,7 +16,7 @@ export function Hero() {
       id="hero"
       className="hero-gradient relative flex min-h-screen items-center overflow-hidden"
     >
-      <div className="relative z-10 w-full mx-auto max-w-7xl px-4 pt-6 pb-32 sm:py-32 sm:px-6 lg:px-8">
+      <div className="relative z-10 w-full mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           {/* Main heading */}
           <motion.h1
@@ -78,18 +78,24 @@ export function Hero() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
             className="flex flex-col items-center gap-4 sm:flex-row sm:justify-start"
           >
-            <button
-              onClick={() => scrollTo("#cta")}
-              className="w-full rounded-xl bg-primary px-8 py-3.5 text-base font-semibold text-background transition-all duration-300 hover:bg-primary-dark hover:shadow-[0_0_30px_rgba(0,229,160,0.35)] sm:w-auto"
-            >
-              Подключиться
-            </button>
-            <button
-              onClick={() => scrollTo("#features")}
-              className="w-full rounded-xl border border-border px-8 py-3.5 text-base font-semibold text-foreground transition-all duration-300 hover:border-primary hover:text-primary sm:w-auto"
-            >
-              Узнать больше
-            </button>
+            <div className="glass-btn-wrap block w-full sm:inline-block sm:w-auto">
+              <button
+                onClick={() => scrollTo("#cta")}
+                className="glass-btn glass-btn-green w-full text-base sm:w-auto"
+              >
+                <span>Подключиться</span>
+              </button>
+              <div className="glass-btn-shadow" />
+            </div>
+            <div className="glass-btn-wrap block w-full sm:inline-block sm:w-auto">
+              <button
+                onClick={() => scrollTo("#features")}
+                className="glass-btn w-full text-base sm:w-auto"
+              >
+                <span>Узнать больше</span>
+              </button>
+              <div className="glass-btn-shadow" />
+            </div>
           </motion.div>
         </div>
       </div>

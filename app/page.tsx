@@ -1,16 +1,17 @@
 import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Features } from "@/components/sections/Features";
 import { Countries } from "@/components/sections/Countries";
 import { Pricing } from "@/components/sections/Pricing";
 import { CTA } from "@/components/sections/CTA";
 import { FixedVideo } from "@/components/ui/FixedVideo";
+import { FullPageScroller } from "@/components/animations/FullPageScroller";
 
 export default function Home() {
   return (
     <>
       <Header />
+      <FullPageScroller />
 
       {/* Video stays fixed on the right on desktop (lg+) */}
       <FixedVideo />
@@ -25,9 +26,6 @@ export default function Home() {
           <CTA />
         </main>
       </div>
-
-      {/* Footer outside the content wrapper — spans full page width */}
-      <Footer />
     </>
   );
 }

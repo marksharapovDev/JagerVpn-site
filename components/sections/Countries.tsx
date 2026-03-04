@@ -4,8 +4,8 @@ import { SITE_CONFIG } from "@/lib/constants";
 
 export function Countries() {
   return (
-    <section id="countries" className="py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="countries" className="flex min-h-screen items-center">
+      <div className="w-full mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         {/* Section heading */}
         <FadeIn className="mb-4 text-center">
           <h2 className="text-3xl font-bold sm:text-4xl glass-heading">
