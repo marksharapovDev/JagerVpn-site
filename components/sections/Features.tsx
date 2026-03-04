@@ -48,9 +48,8 @@ export function Features() {
             const Icon = feature.icon;
             return (
               <StaggerItem key={feature.title}>
-                {/* Hover: border fades to primary, green glow appears */}
-                <div className="group flex h-full flex-col gap-4 rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:border-primary hover:shadow-[0_0_24px_rgba(0,229,160,0.12)]">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-surface-2 transition-all duration-300 group-hover:bg-[rgba(0,229,160,0.08)]">
+                <div className="glass-card group flex h-full flex-col gap-4 rounded-xl p-6">
+                  <div className="glass-icon-wrap flex h-12 w-12 items-center justify-center rounded-xl">
                     <Icon size={22} className="text-primary" />
                   </div>
                   <div>

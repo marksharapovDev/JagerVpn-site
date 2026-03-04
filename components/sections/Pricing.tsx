@@ -60,22 +60,13 @@ export function Pricing() {
             <StaggerItem key={plan.name}>
               <div
                 className={[
-                  "relative flex h-full flex-col rounded-2xl border p-8 transition-all duration-300",
-                  plan.isPopular
-                    ? "scale-[1.03] border-primary bg-surface shadow-[0_0_32px_rgba(0,229,160,0.15)]"
-                    : "border-border bg-surface hover:border-primary hover:shadow-[0_0_20px_rgba(0,229,160,0.08)]",
+                  "glass-card relative flex h-full flex-col rounded-2xl p-8",
+                  plan.isPopular ? "glass-card-green scale-[1.03]" : "",
                 ].join(" ")}
               >
                 {/* Badge */}
                 {plan.badge && (
-                  <span
-                    className={[
-                      "absolute -top-3 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 text-xs font-semibold",
-                      plan.isPopular
-                        ? "bg-primary text-background"
-                        : "border border-border bg-surface text-muted",
-                    ].join(" ")}
-                  >
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border border-primary/40 bg-background/70 px-3 py-1 text-xs font-semibold text-primary backdrop-blur-sm">
                     {plan.badge}
                   </span>
                 )}
@@ -113,13 +104,12 @@ export function Pricing() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={[
-                      "glass-btn w-full text-sm",
+                      "glass-btn w-full text-base",
                       plan.isPopular ? "glass-btn-green" : "",
                     ].join(" ")}
                   >
                     <span>Начать</span>
                   </a>
-                  <div className="glass-btn-shadow" />
                 </div>
               </div>
             </StaggerItem>

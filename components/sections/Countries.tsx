@@ -24,16 +24,13 @@ export function Countries() {
             <StaggerItem key={country.name}>
               <div
                 className={[
-                  "group relative flex flex-col items-center gap-2 rounded-xl border bg-surface p-4 transition-all duration-300",
-                  "hover:scale-105 hover:border-primary hover:shadow-[0_0_16px_rgba(0,229,160,0.15)]",
-                  country.isPopular
-                    ? "border-primary shadow-[0_0_12px_rgba(0,229,160,0.1)]"
-                    : "border-border",
+                  "glass-card group relative flex flex-col items-center gap-2 rounded-xl p-4 hover:scale-105",
+                  country.isPopular ? "glass-card-green" : "",
                 ].join(" ")}
               >
                 {/* Popular badge */}
                 {country.isPopular && (
-                  <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-full border border-primary bg-background px-2 py-0.5 text-[10px] font-medium text-primary">
+                  <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-full border border-primary/40 bg-background/70 px-2 py-0.5 text-[10px] font-medium text-primary backdrop-blur-sm">
                     Популярно
                   </span>
                 )}
