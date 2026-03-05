@@ -24,7 +24,7 @@ export function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="sm:hidden -mx-4 min-h-[55vh] flex justify-center"
-          >
+          >/
             <PingPongVideo
   className="w-full max-w-[500px] h-auto drop-shadow-[0_0_60px_rgba(0,229,160,0.3)]"
 />

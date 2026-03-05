@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import PingPongVideo from "@/components/ui/PingPongVideo";
+import PingPongVideo from "@/components/ui/PingPongVideo"
+import { motion } from "framer-motion"
 
 /**
  * Fixed video panel — desktop (lg+) only.
@@ -17,7 +17,7 @@ export function FixedVideo() {
     >
       {/* Left-edge fade so the video blends into the content side */}
       <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-background to-transparent" />
-      <PingPongVideo src="/hero-model.webm" className="w-[88%] h-auto" />
+      <PingPongVideo className="w-[88%] h-auto" />
     </motion.div>
   );
 }
