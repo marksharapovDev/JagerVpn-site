@@ -23,10 +23,11 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="sm:hidden -mx-4 flex justify-center"
-            style={{ transform: "scale(1.55)", transformOrigin: "top center" }}
+            className="sm:hidden -mx-4 min-h-[55vh] flex justify-center"
           >
-            <PingPongVideo src="/hero-model.webm" className="w-full h-auto" />
+            <PingPongVideo
+  className="w-full max-w-[500px] h-auto drop-shadow-[0_0_60px_rgba(0,229,160,0.3)]"
+/>
           </motion.div>
 
           {/* Spacer: pushes tagline + buttons to the bottom on mobile */}
