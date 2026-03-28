@@ -24,11 +24,11 @@ export interface SiteConfig {
 // To update Telegram links, change telegramBot and telegramChannel below.
 // ─────────────────────────────────────────────
 export const SITE_CONFIG: SiteConfig = {
-  siteName: "JagerVPN",
+  siteName: "JagerVPS",
   tagline: "Опьяняющая скрорость.",
 
-  telegramBot: "https://t.me/JagerVPN_bot",
-  telegramChannel: "https://t.me/jagervpn",
+  telegramBot: "https://t.me/JagerVPS_bot",
+  telegramChannel: "https://t.me/jagervps",
 
   navLinks: [
     { label: "Главная", href: "#hero" },

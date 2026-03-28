@@ -22,7 +22,7 @@ export function CTA() {
           {/* Sub-text */}
           <FadeIn delay={0.1}>
             <p className="mb-10 glass-muted">
-              Подключитесь к JagerVPN сегодня — настройка займёт менее 2 минут
+              Подключитесь к JagerVPS сегодня — настройка займёт менее 2 минут
             </p>
           </FadeIn>
 

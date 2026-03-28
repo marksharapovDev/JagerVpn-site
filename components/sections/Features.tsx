@@ -38,7 +38,7 @@ export function Features() {
         {/* Section heading */}
         <FadeIn className="mb-16 text-center">
           <h2 className="text-3xl font-bold sm:text-4xl glass-heading">
-            Почему JagerVPN?
+            Почему JagerVPS?
           </h2>
         </FadeIn>
 
