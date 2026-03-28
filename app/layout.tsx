@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   description:
     "Защитите интернет-соединение с шифрованием военного уровня. Просматривайте анонимно, обходите ограничения и защищайте данные с JagerVPN.",
   keywords: ["VPN", "конфиденциальность", "безопасность", "анонимный браузинг", "JagerVPN"],
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function RootLayout({
